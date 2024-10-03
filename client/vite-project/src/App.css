@@ -1,42 +1,133 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Metrophobic&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Metrophobic", sans-serif;
+   
+ }
+ 
+ 
+ .container{
+  background-color: aqua;
+  width: 100vw;
+   
+   
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+   
+   
+  
+ }
+  
+ nav{
+   background-color: #E5E5E5;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  
+   
+ }
+ 
+ ul{
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+  
+ .top{
+  width: 89%;
+ 
+  display: flex;
+  
+  align-items: center;
+background-color: #E5E5E5;
+color: #0A033C;
+flex-direction: row;
+justify-content: space-between;
+ 
+ 
+ }
+ .topLeft{
+  font-size: larger;
+  font-weight: 700;
+ }
+ .flex{
+  display: flex;
+  gap: 10px;
+   
+ }
+ /* .nav ul li a {
+  text-decoration: none;
+} */
+.nav ul {
+  text-decoration: none;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  /* justify-content: center;   */
+  gap: 50px;
+
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+nav ul li {
+  margin: 0 10px;
+  
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+  position: relative; /* Nécessaire pour positionner l'élément :after */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+ 
+
+ 
+ .top img{
+  width: 25px;
+  height: 25px;
+ }
+ .topLeft{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-family: serif;
+  font-size: 20px;
+ }
+ .navi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   
+   
+  height: 20px;
+  color: #0A033C;
+
+}
+.navi {
+  color: #0A033C; /* default color */
 }
 
-.card {
-  padding: 2em;
+.active .navi {
+  color: #9C4DF4; /* color when active */
 }
 
-.read-the-docs {
-  color: #888;
+.flex li {
+  list-style: none;
+  margin-right: 15px;
 }
+
+
+ 
+
+
+
+ 
+
+  
