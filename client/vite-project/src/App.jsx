@@ -12,6 +12,7 @@ import College from "./components/College";
 import Courses from "./components/Courses";
 import Cart from "./components/Cart";
 import Myaccount from "./components/Myaccount";
+import Footer from "./components/Footer";
  
  
 import { Route, Routes } from "react-router-dom";
@@ -37,6 +38,7 @@ function App() {
             <Route path="Myaccount" element={<Myaccount/>} />
           </Route>
         </Routes>
+        <Footer/>
 
          
       </div>

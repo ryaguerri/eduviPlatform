@@ -11,13 +11,14 @@
  
  
  .container{
-  background-color: aqua;
+  background-color: white;
   width: 100vw;
    
    
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+   
    
    
   
@@ -47,14 +48,19 @@
   align-items: center;
 background-color: #E5E5E5;
 color: #0A033C;
+
 flex-direction: row;
 justify-content: space-between;
  
  
  }
+ .top li{
+  font-weight: 600;
+ }
  .topLeft{
-  font-size: larger;
-  font-weight: 700;
+  font-size: xx-large;
+  font-weight: 900;
+  
  }
  .flex{
   display: flex;
@@ -98,7 +104,7 @@ nav ul li a {
   gap: 5px;
   align-items: center;
   font-family: serif;
-  font-size: 20px;
+  font-size: 30px;
  }
  .navi {
   display: flex;

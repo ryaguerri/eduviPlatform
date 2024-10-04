@@ -1,0 +1,252 @@
+.foot{
+    border: 4px solid rgb(213, 40, 40);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 90px;
+}
+.item1{
+    width: 89%;
+     
+    height: 420px;
+    background-color: #0A033C;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+.images{
+    width: 92%;
+    height: 294px;
+     
+    display: flex;
+    flex-direction: column;
+     
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    
+    
+    /* position: relative; */
+    
+}
+.foot img{
+    width: 60px;
+    height: 60px;
+}
+.ima1{
+    position: absolute;
+    top: 64px;
+    left: 46px;
+}
+.ima4{
+    position: absolute;
+    top: 64px;
+    right: 46px;
+}
+.ima2{
+    position: absolute;
+    top: 171px;
+    left: 151px;
+}
+.ima5{
+    position: absolute;
+    top: 171px;
+    right: 151px;
+}
+.ima3{
+    position: absolute;
+    top: 278px;
+    left: 76px;
+}
+.ima6{
+    position: absolute;
+    top: 278px;
+    right: 76px;
+}
+.imagesitem1{
+    width: 49%;
+    height: 110px;
+     
+    text-align: center;
+
+}
+.imagesitem1 p {
+    font-size: 41px; /* Adjust size as needed */
+    font-weight: bold;
+    
+    color: white;
+    margin: 0 auto;
+    padding: 0;
+     
+   
+  }
+  
+.imagesitem2{
+    width: 42%;
+    height: 30px;
+    
+
+}
+.imagesitem3{
+     
+    width: 43%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+
+}
+.imagesitem2 p{
+    color: hsla(0, 0%, 100%, 0.498);
+   font-weight: normal;
+    font-size: 14.5px;
+}
+.imagesitem3 input {
+    /* Ajoute ton style ici */
+     width: 72%;
+     background-color: rgba(255, 255, 255, 0.2);
+     color: white;
+     
+    border-top-left-radius: 8px;
+    
+    border-bottom-left-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    border: none;
+   font-weight: 600;
+  }
+   
+  .imagesitem3 button  {
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    /* Ajoute ton style ici */
+    
+    color: white;
+    width: 28%;
+    background-color: #9C4DF4;
+    border: none;
+    font-weight: 600;
+  }
+  .item2{
+    width: 88%;
+   
+    height: 243px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+
+}
+.item21{
+    width: 15.2%;
+    height: 217px;
+     
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.item22{
+    width: 17.4%;
+    height: 207px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.item23{
+    width: 11.4%;
+    height: 243px;
+     
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.item24{
+    width: 15.8%;
+    height: 243px;
+     
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.item25{
+ 
+    width: 6.5%;
+    height: 243px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+}
+.item211{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+     
+    font-size: 30px;
+     
+    font-weight: 900;
+
+
+}
+.item211 img{
+    width: 25px;
+    height: 25px;
+}
+.item212{
+     
+    height: 36px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+    margin-bottom: 20px;
+   
+
+}
+/* .item212 img{
+    width: 20px;
+    height: 20px;
+} */
+.item212 div:nth-child(1) img {
+    width: 24px;
+    height: 24px;
+  }
+  .item212 div:nth-child(2) img {
+    width: 36px;
+    height: 36px;
+  }
+  .item212 div:nth-child(3) img {
+    width: 22px;
+    height: 17.6px;
+  }
+  .item212 div:nth-child(4) img {
+    width: 22px;
+    height: 18.57px;
+  }
+  
+ 
+.item2 p{
+    color: #0a033cb7;
+    opacity: 1; 
+}
+
+.titre{
+    
+    font-size: 23px;
+     
+    font-weight: 900;
+}
+
