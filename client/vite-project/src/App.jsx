@@ -13,6 +13,8 @@ import Courses from "./components/Courses";
 import Cart from "./components/Cart";
 import Myaccount from "./components/Myaccount";
 import Footer from "./components/Footer";
+import Joinasmentor from "./components/Joinasmentor";
+import Register from "./components/Register";
  
  
 import { Route, Routes } from "react-router-dom";
@@ -36,6 +38,8 @@ function App() {
             <Route path="Cart" element={<Cart/>} />
             <Route path="High" element={<High/>} />
             <Route path="Myaccount" element={<Myaccount/>} />
+            <Route path="Joinasmentor" element={<Joinasmentor />} />
+            <Route path="Register" element={<Register />} />
           </Route>
         </Routes>
         <Footer/>

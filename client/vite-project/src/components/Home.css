@@ -1,0 +1,555 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  border: 2px solid yellow;
+  align-items: center;
+  width: 100vw;
+  background-color: #f7f5fa;
+}
+.header {
+  width: 100vw;
+  height: 773px;
+   
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid black;
+}
+.classes {
+  width: 78.8%;
+  border: 1px solid black;
+  height: 1120px;
+}
+
+
+.jointeacher {
+  width: 75.6%;
+  height: 521px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+.jointeacherimage {
+  width: 46.7%;
+  height: 521px;
+}
+.jointeacherimage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.jointeacherpara {
+  width: 45.8%;
+  height: 375px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.jointeacherpara1 {
+  width: 87%;
+  height: 165px;
+}
+.jointeacherpara2 {
+  width: 100%;
+  height: 90px;
+}
+.jointeacherpara button {
+  width: 40.8%;
+  height: 60px;
+  color: white;
+  background-color: #9c4df4;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border: none;
+  line-height: 20px;
+}
+.want {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 55px;
+  text-align: left;
+  color: #0a033c;
+}
+.high {
+  font-size: 15.5px;
+  font-weight: 400;
+  line-height: 30px;
+
+  color: #5d5a6f;
+}
+.headerleft {
+  width: 42.1%;
+  height: 510px;
+   
+  margin-bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.headerright {
+  
+  width: 46.4%;
+  height: 699px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.headerrightimage {
+  width: 77.5%;
+  height: 100%;
+ 
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  background: url("src/assets/BG.svg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+.headerrightimage img {
+  width: 93%;
+  height: 669px;
+  object-fit: cover;
+}
+
+.headerleft1 {
+  width: 39.4%;
+  height: 50px;
+  
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #ff6652;
+}
+.headerleft2 {
+   
+  width: 100%;
+  height: 225px;
+
+  font-size: 60px;
+  line-height: 75px;
+  text-align: left;
+  color: #0a033c;
+}
+.headerleft3 {
+   
+  width: 100%;
+  height: 90px;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+  color: #5d5a6f;
+}
+.headerleft4 {
+  
+  width: 100%;
+  height: 60px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  background-color: white;
+}
+
+.hi1 img {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 538px;
+  right: 450px;
+}
+.hi2 img {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 220px;
+  right: 420px;
+}
+.hi3 img {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 470px;
+  right: 4px;
+}
+.hi4 img {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 540px;
+  left: 410px;
+}
+.classes {
+  width: 78.8%;
+  border: 1px solid black;
+  height: 1120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.classes1{
+   
+  width: 73.9%;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+
+}
+.classes11{
+  width: 66.1%;
+  height: 110px;
+   
+   
+font-size: 42px;
+font-weight: 700;
+line-height: 55px;
+text-align: center;
+color:   #0A033C;
+
+
+
+}
+.classes12{
+  
+font-size: 16px;
+font-weight: 400;
+line-height: 30px;
+text-align: center;
+height: 90px;
+width: 100%;
+ 
+
+}
+.classes1 button{
+  width: 19.3%;
+height: 60px;
+top: 1243px;
+left: 601px;
+gap: 0px;
+border-radius: 8px 8px 8px 8px;
+opacity: 0px;
+color: white;
+background-color: #9c4df4;
+border: none;
+
+}
+.classes2{
+   
+  width: 93.3%;
+  height: 600px;
+  
+opacity: 0px;
+display: flex;
+align-items: center;
+justify-content: center;
+
+}
+.classes2 img{
+  width: 94.3%;
+  height: 570px;
+  object-fit: cover;
+  border: 20px solid rgb(255, 255, 255);
+  border-radius: 20px 20px 20px 20px;
+  position: absolute;
+    
+  
+ 
+  
+}
+.girl img{
+  width: 40%;
+  height: 450px;
+  position: absolute;
+  top: 670px;
+  right: 600px;
+  object-fit: cover;
+}
+.call img{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 900px;
+  right: 500px;
+  object-fit: cover;
+
+}
+.arrow img{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 900px;
+  right: 100px;
+  object-fit: cover;
+
+}
+.classes3{
+  
+  width: 93.3%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.classes3 button{
+  width: 31.4%;
+  height: 100px;
+  border-radius: 8px 8px 8px 8px;
+   
+font-size: 25px;
+font-weight: 600;
+line-height: 25px;
+text-align: left;
+color:   #0A033C;
+display: flex
+
+;
+align-items: center;
+justify-content: start;
+gap: 10px
+;
+padding-left: 10px;
+background-color: white;
+border: none;
+
+
+}
+.classes3 button img{
+  width: 70px;
+  height: 70px;
+}
+.patt img{
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  top: 330px;
+  left: 900px;
+}
+.joincourses {
+  width: 88.8%;
+  height: 667px;
+  border: 1px solid black;
+  background-color: #EDE9F2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.joincourses1{
+  width: 39%;
+  height: 440px;
+   
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.joincourses2{
+ 
+  width: 53.8%;
+  height: 587px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.col{
+  width: 34%;
+  height: 50px;
+  border-radius: 8px 8px 8px 8px;
+  color: #9C4DF4;
+  background-color: #E4E2F4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   
+font-size: 20px;
+font-weight: 500;
+line-height: 20px;
+text-align: left;
+
+}
+.covid{
+  width: 91.4%;
+  height: 165px;
+   
+   
+font-size: 40px;
+font-weight: 700;
+line-height: 55px;
+text-align: left;
+
+}
+.dif{
+  width: 100%;
+  height: 90px;
+   
+   counter-reset: #5D5A6F;
+font-size: 15.6px;
+font-weight: 400;
+line-height: 30px;
+text-align: left;
+
+
+}
+.joincourses1 button{
+  width: 37%;
+  height: 60px;
+  border-radius: 8px 8px 8px 8px;
+  color: white;
+  background-color: #9C4DF4;
+  border: none;
+}
+.joincourses2 img{
+  height: 587px;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+.patt1 img{
+  position: absolute;
+  bottom: 425px;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  left: 120px;
+}
+.html img{
+  object-fit: cover;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+   
+  right: 450px;
+  bottom: 340px;
+
+}
+.php img{
+  object-fit: cover;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+   
+  left: 350px;
+  bottom: 315px;
+
+}
+.java img{
+  object-fit: cover;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+   
+  left: 400px;
+  bottom: 465px;
+
+}
+.lessons {
+  width: 88.8%;
+  height: 1108px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.lessons1{
+  border: 2px solid black;
+  height: 55px;
+  width: 51.4%;
+   
+
+
+}
+.lessons1 p{
+  font-size: 42px;
+font-weight: 700;
+line-height: 55px;
+text-align: center;
+color: #0A033C;
+
+}
+.lessons2{
+  border: 2px solid black;
+  height: 65px;
+  width: 54.6%;
+   
+font-size: 16px;
+font-weight: 400;
+line-height: 30px;
+text-align: center;
+color: #5D5A6F;
+
+   
+
+
+}
+.lessons3{
+  width: 35.6%;
+  height: 60px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.lessons3 button{
+  width: 33%;
+  height: 60px;
+  border: 1px solid black;
+  border-radius: 8px 8px 8px 8px;
+  color: #0A033C;
+   
+
+
+}
+.lessons4{
+  width: 100%;
+  height: 600px;
+  border: 1px solid black;
+}
+.lessons5{
+  height: 60px;
+  width: 15.7%;
+   
+   
+
+}
+.lessons5 button{
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 8px 8px 8px;
+  background-color: #9c4df4;
+  color: #ffffff;
+  font-family: Inter;
+font-size: 16px;
+font-weight: 500;
+line-height: 20px;
+text-align: center;
+border: none;
+
+
+}
