@@ -1,0 +1,278 @@
+ .join{
+    
+
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f5fa;
+    gap: 80px;
+    position: relative;
+ }
+ .topjoin{
+    margin-top: 20px;
+   
+    width: 89%;
+    height: 270px;
+    background-color: #efebf5;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+     
+ }
+ .topjoin1{
+    width: 22.6%;
+    height: 100px;
+     
+ }
+ .topjoin2{
+    width: 29.9%;
+    height: 218px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+     
+ }
+ .topjoin2 img{
+    width: 95%;
+    height: 100%;
+    object-fit: cover;
+ }
+ .topjoin1 p{
+     
+font-size: 40px;
+font-weight: 600;
+line-height: 50px;
+text-align: left;
+ color: #0A033C;
+
+ }
+ 
+ .patt3{
+    width: 128px;
+    height: 60px;
+     
+    position: absolute;
+    top: 230px;
+    left: 420px;
+
+ }
+ .patt3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+ .join2{
+   width: 81.7%;
+   height: 620px;
+    
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+.join21{
+   width: 44.3%;
+    
+   height: 100%;
+    
+  
+    
+   background-color: #FFDEDA;
+   margin: 0px;
+   padding-top: 65px;
+   padding-left: 20px;
+  
+
+}
+
+.join2 .join21 img{
+    
+      
+   object-fit: cover;
+
+  
+}
+.join22{
+   width:51.6%;
+    
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   justify-content: center;
+   gap: 10px;
+
+}
+.join221{
+    
+   width: 46.9%;
+   height: 30px;
+   
+   font-size: 27px;
+   font-weight: 600;
+   line-height: 30px;
+   text-align: left;
+   color: #0A033C;
+
+
+}
+.join222{
+    
+   width: 100%;
+   height: 120px;
+    
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 30px;
+   text-align: left;
+   color: #5D5A6F;
+
+
+}
+.join223{
+   
+   display: flex;
+   flex-direction: column;
+   width: 63%;
+   height: 180px;
+}
+.join22 button{
+   margin-top: 10px;
+   width: 23.5%;
+   height: 54px;
+   
+ 
+   border-radius: 10px 10px 10px 10px;
+   opacity: 0px;
+   color: white;
+   background-color: #9C4DF4;
+   border: none;
+
+}
+.requirements-tabs {
+   margin-top: 20px;
+   padding: 10px;
+ }
+ 
+ .tab-header {
+   display: flex;
+   justify-content: space-between;
+   border-bottom: 1px solid #ccc;
+ }
+ 
+ 
+ 
+ .active-tab {
+   color: #FF6652; /* Red color to match the selected tab */
+   border-bottom: 2px solid #ff5a5f;
+ }
+ .noactive-tab {
+   color:   #5D5A6F;  
+   border-bottom: 2px solid #5D5A6F;
+ }
+ 
+ .requirements-list {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   list-style: none;
+   /* padding-left: 20px; */
+ }
+ 
+ .requirements-list li {
+   display: flex; /* Aligne le contenu sur une seule ligne */
+  align-items: center; /* Centre verticalement le texte */
+   /* Ajoute une bordure autour du li */
+  gap: 2px;
+  
+  
+  position: relative; /* Nécessaire pour positionner le point */
+  color: #0A033C;
+    
+
+   
+    
+    
+ }
+  
+ .requirements-list li::before {
+   content: '•'; /* Crée un point manuel */
+   color: #FF6652; /* Couleur du point */
+   font-size: 1.5em; /* Taille du point */
+   
+ }
+ 
+  
+ .tabs{
+    padding-bottom: 8px;
+   display: flex;
+    font-size: 16px;
+   justify-content: space-between;
+   width: 100%;
+ }
+ span{
+    
+   padding-bottom:10px;
+ }
+ span:nth-child(1) {
+   width: 54%; /* Sélectionne le span si c'est le premier enfant de son parent */
+   line-height: 20px;
+ }
+ span:nth-child(2) {
+   width: 46%; /* Sélectionne le span si c'est le premier enfant de son parent */
+   display: flex;
+   justify-content: center;
+ }
+ .join3{
+    
+   height: 727px;
+   width: 80.4%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
+    
+ }
+ .join31{
+    
+   width: 63.7%;
+   height: 55px;
+   
+   font-size: 42px;
+   font-weight: 700;
+   line-height: 55px;
+   text-align: center;
+   color: #0A033C;
+
+ }
+ .join32{
+   width: 91.5%;
+   height: 600px;
+   border: 16px solid rgb(255, 255, 255);
+   border-radius: 20px 20px 20px 20px;
+  
+   background-color: #FF6652;
+   position: relative;
+    
+ }
+ .join3 img{
+   position: absolute;
+   width: 15.63%;
+   height: 206px;
+   right: 0px;
+   top: 0px;
+   object-fit: cover;
+ }
+ 
+ 
+ 
+ 
+ 
