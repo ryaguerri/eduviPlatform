@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./joinasmentor.css";
 
 const Joinasmentor = () => {
+  const [activeTab, setActiveTab] = useState("requirements");
+
   return (
     <div className="join">
       <div className="topshop1">
@@ -37,12 +39,45 @@ const Joinasmentor = () => {
             </p>
           </div>
           <div className="join223">
-            <div className="join223bot">
-              
+            <div className="tabs">
+              <span
+                className={
+                  activeTab === "requirements" ? "active-tab" : "noactive-tab"
+                }
+                onClick={() => setActiveTab("requirements")}
+              >
+                Instructor Requirements
+              </span>
+              <span
+                className={
+                  activeTab === "rules" ? "active-tab" : "noactive-tab"
+                }
+                onClick={() => setActiveTab("rules")}
+              >
+                Instructor Rules
+              </span>
             </div>
+
+            {activeTab === "requirements" && (
+              <ul className="requirements-list">
+                <li>An undergraduate degree</li>
+                <li>Participate in supervised teaching</li>
+                <li>State teaching license</li>
+                <li>Pursue graduate studies</li>
+              </ul>
+            )}
+
+            {activeTab === "rules" && (
+              <p className="rules-content">Instructor rules will go here...</p>
+            )}
           </div>
           <button>Apply Now</button>
         </div>
+      </div>
+      <div className="join3">
+      <img src="src/assets/batata.png" alt="" />
+        <div className="join31"><p>How to apply to join as instructor</p></div>
+        <div className="join32"></div>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
  .join{
-    border: 1px solid saddlebrown;
+    
 
     width: 100vw;
     display: flex;
@@ -72,14 +72,14 @@ text-align: left;
  .join2{
    width: 81.7%;
    height: 620px;
-   border: 1px solid black;
+    
    display: flex;
    flex-direction: row;
    justify-content: space-between;
 }
 .join21{
    width: 44.3%;
-   border: 1px solid black;
+    
    height: 100%;
     
   
@@ -92,7 +92,7 @@ text-align: left;
 
 }
 
-.join21 img{
+.join2 .join21 img{
     
       
    object-fit: cover;
@@ -101,7 +101,7 @@ text-align: left;
 }
 .join22{
    width:51.6%;
-   border: 1px solid rgb(192, 34, 34);
+    
    height: 100%;
    display: flex;
    flex-direction: column;
@@ -111,7 +111,7 @@ text-align: left;
 
 }
 .join221{
-   border: 1px solid rgb(192, 34, 34);
+    
    width: 46.9%;
    height: 30px;
    
@@ -124,7 +124,7 @@ text-align: left;
 
 }
 .join222{
-   border: 1px solid rgb(192, 34, 34);
+    
    width: 100%;
    height: 120px;
     
@@ -137,13 +137,14 @@ text-align: left;
 
 }
 .join223{
-   border: 1px solid black;
+   
    display: flex;
    flex-direction: column;
-   width: 56.4%;
+   width: 63%;
    height: 180px;
 }
 .join22 button{
+   margin-top: 10px;
    width: 23.5%;
    height: 54px;
    
@@ -155,6 +156,123 @@ text-align: left;
    border: none;
 
 }
+.requirements-tabs {
+   margin-top: 20px;
+   padding: 10px;
+ }
+ 
+ .tab-header {
+   display: flex;
+   justify-content: space-between;
+   border-bottom: 1px solid #ccc;
+ }
+ 
+ 
+ 
+ .active-tab {
+   color: #FF6652; /* Red color to match the selected tab */
+   border-bottom: 2px solid #ff5a5f;
+ }
+ .noactive-tab {
+   color:   #5D5A6F;  
+   border-bottom: 2px solid #5D5A6F;
+ }
+ 
+ .requirements-list {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   list-style: none;
+   /* padding-left: 20px; */
+ }
+ 
+ .requirements-list li {
+   display: flex; /* Aligne le contenu sur une seule ligne */
+  align-items: center; /* Centre verticalement le texte */
+   /* Ajoute une bordure autour du li */
+  gap: 2px;
+  
+  
+  position: relative; /* Nécessaire pour positionner le point */
+  color: #0A033C;
+    
+
+   
+    
+    
+ }
+  
+ .requirements-list li::before {
+   content: '•'; /* Crée un point manuel */
+   color: #FF6652; /* Couleur du point */
+   font-size: 1.5em; /* Taille du point */
+   
+ }
+ 
+  
+ .tabs{
+    padding-bottom: 8px;
+   display: flex;
+    font-size: 16px;
+   justify-content: space-between;
+   width: 100%;
+ }
+ span{
+    
+   padding-bottom:10px;
+ }
+ span:nth-child(1) {
+   width: 54%; /* Sélectionne le span si c'est le premier enfant de son parent */
+   line-height: 20px;
+ }
+ span:nth-child(2) {
+   width: 46%; /* Sélectionne le span si c'est le premier enfant de son parent */
+   display: flex;
+   justify-content: center;
+ }
+ .join3{
+    
+   height: 727px;
+   width: 80.4%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
+    
+ }
+ .join31{
+    
+   width: 63.7%;
+   height: 55px;
+   
+   font-size: 42px;
+   font-weight: 700;
+   line-height: 55px;
+   text-align: center;
+   color: #0A033C;
+
+ }
+ .join32{
+   width: 91.5%;
+   height: 600px;
+   border: 16px solid rgb(255, 255, 255);
+   border-radius: 20px 20px 20px 20px;
+  
+   background-color: #FF6652;
+   position: relative;
+    
+ }
+ .join3 img{
+   position: absolute;
+   width: 15.63%;
+   height: 206px;
+   right: 0px;
+   top: 0px;
+   object-fit: cover;
+ }
+ 
+ 
  
  
  
