@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import "./joinasmentor.css";
+import { useNavigate } from "react-router-dom";
+
+
+
+
 
 const Joinasmentor = () => {
   const [activeTab, setActiveTab] = useState("requirements");
+  const navigate = useNavigate();
 
   return (
     <div className="join">
@@ -71,7 +77,7 @@ const Joinasmentor = () => {
               <p className="rules-content">Instructor rules will go here...</p>
             )}
           </div>
-          <button>Apply Now</button>
+          <button onClick={() => navigate("/Mentors")}>Apply Now</button>
         </div>
       </div>
       <div className="join3">

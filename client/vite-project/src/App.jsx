@@ -15,6 +15,8 @@ import Myaccount from "./components/Myaccount";
 import Footer from "./components/Footer";
 import Joinasmentor from "./components/Joinasmentor";
 import Register from "./components/Register";
+import Mentors from "./components/Mentors";
+import MentorDetails from './components/MentorDetails';
  
  
 import { Route, Routes } from "react-router-dom";
@@ -39,7 +41,11 @@ function App() {
             <Route path="High" element={<High/>} />
             <Route path="Myaccount" element={<Myaccount/>} />
             <Route path="Joinasmentor" element={<Joinasmentor />} />
+            <Route path="Mentors" element={<Mentors />} />
             <Route path="Register" element={<Register />} />
+
+             
+            
           </Route>
         </Routes>
         <Footer/>
