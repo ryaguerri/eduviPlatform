@@ -16,6 +16,7 @@ import Footer from "./components/Footer";
 import Joinasmentor from "./components/Joinasmentor";
 import Register from "./components/Register";
 import Mentors from "./components/Mentors";
+import Signin from "./components/Signin";
 import MentorDetails from './components/MentorDetails';
  
  
@@ -43,6 +44,7 @@ function App() {
             <Route path="Joinasmentor" element={<Joinasmentor />} />
             <Route path="Mentors" element={<Mentors />} />
             <Route path="Register" element={<Register />} />
+            <Route path="Signin" element={<Signin />} />
 
              
             
