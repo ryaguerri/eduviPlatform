@@ -3,7 +3,7 @@ import "./register.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-const Register = () => {
+const Signin = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -30,26 +30,18 @@ const Register = () => {
         </div>
         <div className="bg2"></div>
         <div className="bg33">
-        <button className="gog">
-              {" "}
-              <img src="src/assets/gog.png" alt="ww" />
-              Signup with google 
-            </button>
-          <form action="" className="bg3">
-           
+          <button className="gog">
+            {" "}
+            <img src="src/assets/gog.png" alt="ww" />
+            Signup with google
+          </button>
+          <form action="" className="bg3q">
             <div className="op">
               <img src="src/assets/hr.png" alt="ww" />
               <div className="sps">Or signup with your email</div>
               <img src="src/assets/hr.png" alt="3w" />
             </div>
-            <div className="in">
-              <p>Full name</p>
-              <div className="cadna">
-                {" "}
-                <img src="src/assets/acc.png" alt="" />
-              </div>
-              <input type="text" placeholder="Esther Howard"  required/>
-            </div>
+
             <div className="in">
               <div className="cadna">
                 {" "}
@@ -84,25 +76,20 @@ const Register = () => {
                 required
               />
             </div>
-            <div className="terms">
-              <label>
-                <input type="checkbox" name="" id="" />{" "}
-                <p>
-                  I agreed to the <span>Terms & Conditions</span>
-                </p>
-              </label>
-            </div>
 
             <button type="submit" className="up">
-              Sign Up
+              Sign In
             </button>
-            <div className="alr">
-              <p>
-                Already have an account?{" "}
-                <span>
-                  <Link to="/signin">Sign in</Link>
-                </span>
-              </p>
+            <div className="keep">
+              <div className="keep1">
+                <label>
+                  <input type="checkbox" name="" id="" />{" "}
+                  <p>
+                  keep me signed in
+                  </p>
+                </label>
+              </div>
+              <div className="keep2"><p>Forgot password?</p></div>
             </div>
           </form>
         </div>
@@ -111,4 +98,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Signin;
