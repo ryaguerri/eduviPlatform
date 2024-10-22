@@ -1,0 +1,175 @@
+.Courses {
+  border: 1px solid yellowgreen;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  gap: 30px;
+  background-color: #f7f5fa;
+}
+.topCourses {
+  margin-top: 20px;
+
+  width: 89%;
+  height: 270px;
+  background-color: #efebf5;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.topjoin10 {
+  width: 29.84%;
+  height: 100px;
+}
+.topjoin20 {
+  width: 32.5%;
+  height: 233px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.topjoin20 img {
+  width: 95%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+.topjoin10 p {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 50px;
+  text-align: left;
+  color: #0a033c;
+}
+.patoo {
+  width: 125px;
+  height: 80px;
+
+  position: absolute;
+  top: 40px;
+  right: 480px;
+}
+.patoo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.botati {
+  width: 89%;
+  height: 60px;
+   
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bota {
+  background-color: white;
+  color: #0a033c;
+  background-color: white;
+  color: #0a033c;
+  background-color: white;
+  color: #0a033c;
+  background-color: white;
+  color: #0a033c;
+}
+.boti {
+  background-color: #ff6652;
+  color: white;
+}
+.botati button {
+  border: none;
+  width: 16.1%;
+  height: 60px;
+
+  font-weight: 600;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.cora {
+  width: 89%;
+
+   
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+.corabox {
+  width: 22.65%;
+  height: 329px;
+   
+  margin-bottom: 30px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  position: relative;
+  border-radius: 10px 10px 10px 10px;
+}
+.corabox1 {
+  width: 50px;
+  height: 50px;
+   
+}
+ 
+.corabox2 {
+  width: 58.6%;
+  height: 25px;
+  
+  font-family: Metropolis;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 25px;
+  text-align: center;
+  color: #0a033c;
+}
+.corabox3 {
+  width: 89.65%;
+  height: 90px;
+   
+  font-family: Metropolis;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  color: #5d5a6f;
+}
+.corabox button{
+  width: 55.6%;
+  height: 44px;
+  color: #9C4DF4;
+  border: 1px solid #9C4DF4;
+  border-radius: 8px 8px 8px 8px ;
+  background-color: white;
+   
+  
+
+}
+.corabox button:hover{
+  background-color: #9C4DF4; /* New background color when hovering */
+  color: #ffffff; /* Change text color on hover */
+}
+.coraboxab{
+  border-radius: 5px 5px 5px 5px;
+   
+  position: absolute;
+  top: 10px;
+  right: 1px;
+  width: 25%;
+  height: 25px;
+  background-color: #9C4DF4;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ 
