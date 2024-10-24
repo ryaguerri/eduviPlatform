@@ -172,4 +172,20 @@
   align-items: center;
   justify-content: center;
 }
+.corabox img{
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+
+}
+.math{
+  border-radius: 50%;
+}
+.pom{
+  border-radius: 33%;
+}
+.usq{
+  border-radius: 10px 10px 10px 10px ;
+}
+ 
  

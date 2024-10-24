@@ -1,0 +1,77 @@
+{
+  "lessons": [
+    {
+      "lesson": " HTML Introduction ",
+      "content": "HTML stands for Hyper Text Markup Language and is the standard for creating and structuring  \nWeb pages.",
+      "example": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Page Title</title>\n  </head>\n  <body>\n    <h1>This is a Heading</h1>\n    <p>This is a paragraph.</p>\n  </body>\n</html>"
+    },
+    {
+      "lesson": "HTML Elements",
+      "content": "HTML elements are building blocks of HTML pages.",
+      "example": "<h1>This is a Heading</h1>\n<p>This is a paragraph.</p>"
+    },
+    {
+      "lesson": "HTML Headings",
+      "content": "HTML headings are titles or subtitles displayed on a webpage, defined with the <h1> to <h6> \n tags. <h1> defines the most important heading, while <h6> defines the least important. \n ",
+      "example": "<h1>Heading 1</h1>\n<h2>Heading 2</h2>\n<h3>Heading 3</h3>\n<h4>Heading 4</h4>\n<h5>Heading 5</h5>\n<h6>Heading 6</h6>"
+    },
+    {
+      "lesson": "HTML Paragraphs",
+      "content": " The HTML <p> element defines a paragraph.\nA paragraph always starts on a new line, and browsers automatically add some white space \n (a margin) before and after a paragraph. ",
+      "example": "<p>This is a paragraph.</p>\n<p>This is another paragraph.</p> "
+    },
+    {
+      "lesson": "HTML Text Formatting",
+      "content": " HTML contains several elements for defining text with a special meaning.\nFormatting elements were designed to display special types of text:\n<b> - Bold text\n<strong> - Important text\n<i> - Italic text\n<em> - Emphasized text\n<small> - Smaller text",
+      "example": "<b>This text is bold</b>\n<strong>This text is important!</strong> "
+    },
+    {
+      "lesson": "HTML Comments",
+      "content": " Comments in HTML can be used to include notifications and reminders, as well as to\n temporarily hide content. This feature is useful for hiding sections of HTML code.",
+      "example": "<!-- This is a comment -->\n<p>This is a paragraph.</p>\n<!-- Remember to add more information here --> "
+    },
+    {
+      "lesson": "HTML Links",
+      "content": "HTML links, or hyperlinks, allow users to jump to another document when clicked. The mouse \n cursor changes to a hand when hovering over a link. Links can be text, images, or other HTML \n elements. The most important attribute of the <a> element is href, which specifies the link's \n destination, while the visible part of the link is the link text. Clicking the link text directs the user \n to the specified URL.",
+      "example": " <a href=\"https://www.w3schools.com/\">Visit W3Schools.com!</a>"
+    },
+    {
+      "lesson": "HTML Images",
+      "content": "The HTML <img> tag is used to embed images in a web page, functioning as a placeholder for \n linked images. It is an empty tag with no closing tag and requires two attributes: src, which \n specifies the image's path, and alt, which provides alternate text for the image. The browser \n retrieves the image from a web server when the page loads. If the image is unavailable,\n a broken link icon and the alt text will be displayed. The alt text is essential for accessibility \n and should describe the image.",
+      "example": "<img src=\"wrongname.gif\" alt=\"Flowers in Chania\">"
+    },
+    {
+      "lesson": "HTML Div",
+      "content": "The <div> element is a block-level element that occupies the full width of its container and \n creates line breaks before and after. It is commonly used to group sections of a web page,\n and multiple <div> containers can be used on a single page.",
+      "example": " <div> \n  <h2>London</h2>\n  <p>London is the capital city of England.</p>\n  <p>London has over 13 million inhabitants.</p>\n</div>\n\n<div>\n  <h2>Oslo</h2>\n  <p>Oslo is the capital city of Norway.</p>\n  <p>Oslo has over 600,000 inhabitants.</p>\n</div>\n\n<div>\n  <h2>Rome</h2>\n  <p>Rome is the capital city of Italy.</p>\n  <p>Rome has almost 3 million inhabitants.</p>\n</div>"
+    },
+    {
+      "lesson": "HTML Classes",
+      "content": "The HTML class attribute specifies a class for an element, allowing multiple elements to share\n the same class. It is commonly used to reference class names in stylesheets and can be \n accessed by JavaScript for manipulation. For example, three <div> elements with the class city \n will be styled uniformly based on the .city style definition in the head section.",
+      "example": " <!DOCTYPE html>\n<html>\n<head>\n<style>\n.note {\n  font-size: 120%;\n  color: red;\n}\n</style>\n</head>\n<body>\n\n<h1>My <span class=\"note\">Important</span> Heading</h1>\n<p>This is some <span class=\"note\">important</span> text.</p>\n\n</body>\n</html>"
+    },
+    {
+      "lesson": "HTML Semantics",
+      "content": "Semantic elements in HTML convey meaning about their content, enhancing accessibility and \n  understanding for both browsers and developers. Non-semantic elements like <div> and <span> \n do not provide such context. Key examples of non-semantic elements include <div> and <span>, \n while semantic elements include <form>, <table>, <article>, <section>, <nav>, <header>,\n and <footer>. The <section> element groups thematic content with a heading and is often used \n for chapters or news items. The <article> element represents independent content that can \n stand alone, such as blog posts or user comments. The <header> element contains introductory \n content or navigational links and can appear multiple times in a document but should not be \n nested within other <header> or <footer> elements. The <footer> element defines a footer for \n documents or sections, typically including authorship and copyright information. Finally, \n the <nav> element encloses major navigation links, helping assistive technologies identify key \n navigation areas. By using these semantic elements, web developers can create clearer, more \n structured web pages that improve usability and SEO.",
+      "example": "<!DOCTYPE html>\n<nav>\n  <a href=\"/html/\">HTML</a> |\n  <a href=\"/css/\">CSS</a> |\n  <a href=\"/js/\">JavaScript</a> |\n  <a href=\"/jquery/\">jQuery</a>\n</nav>"
+    },
+    {
+      "lesson": "HTML Style Guide",
+      "content": "A consistent, clean, and tidy HTML code makes it easier for others to read and understand \n your code.\n\nHere are some guidelines and tips for creating good HTML code:\n\n1. Always declare the document type at the beginning using `<!DOCTYPE html>`.\n2. Use lowercase element and attribute names for cleaner and more readable code.\n3. Always close HTML elements, even when not required (like the <p> element).\n4. Quote all attribute values for better readability, especially if they contain spaces.\n5. Specify `alt`, `width`, and `height` for images to improve accessibility and layout stability.\n6. Avoid long code lines to prevent horizontal scrolling in editors.\n7. Use blank lines and two-space indentation to separate large or logical blocks of code.",
+
+      "example": "Good:\n<a href=\"https://www.w3schools.com/html/\">Visit our HTML tutorial</a>\n\nBad:\n<a HREF=\"https://www.w3schools.com/html/\">Visit our HTML tutorial</a>"
+    },
+    {
+      "lesson": "HTML Video",
+      "content": "The <video> element displays videos on a web page. The controls attribute adds features\n  like play, pause, and volume. It's recommended to set the width and height \n attributes to prevent flickering during loading. The <source> element specifies \n alternative video formats, and the browser picks the first recognized one. \n Text between <video> and </video> is shown only in browsers that don't support \n the video element.",
+
+      "example": "<video width=\"320\" height=\"240\" autoplay>\n  <source src=\"movie.mp4\" type=\"video/mp4\">\n  <source src=\"movie.ogg\" type=\"video/ogg\">\nYour browser does not support the video tag.\n</video>"
+    },
+    {
+      "lesson": "HTML Audio Element",
+      "content": "The HTML <audio> element is used to play audio on a web page. The `controls` attribute \n provides audio controls like play, pause, and volume. The <source> element specifies alternative \n audio formats, and the browser will use the first supported format. Text between <audio> and \n </audio> is displayed if the browser does not support the audio element.",
+      "example": "<audio controls autoplay muted>\n  <source src=\"horse.ogg\" type=\"audio/ogg\">\n  <source src=\"horse.mp3\" type=\"audio/mpeg\">\nYour browser does not support the audio element.\n</audio>"
+    }
+    
+  ]
+}

@@ -18,6 +18,7 @@ import Register from "./components/Register";
 import Mentors from "./components/Mentors";
 import Signin from "./components/Signin";
 import MentorDetails from './components/MentorDetails';
+import Coursesdet from "./components/Coursesdet";
  
  
 import { Route, Routes } from "react-router-dom";
@@ -45,6 +46,7 @@ function App() {
             <Route path="Mentors" element={<Mentors />} />
             <Route path="Register" element={<Register />} />
             <Route path="Signin" element={<Signin />} />
+            <Route path="Coursesdet" element={<Coursesdet />} />
 
              
             
