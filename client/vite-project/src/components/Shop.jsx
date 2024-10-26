@@ -214,7 +214,7 @@ const Shop = () => {
                     </p>
                     <div className="bookpricerate">
                       <p  className="para2">{book.price.toFixed(2)}$</p>
-                      <p >{renderStars(book.rating)}</p>
+                      <p  className="riq">{renderStars(book.rating)}</p>
                     </div>
                   </div>
                 </div>
