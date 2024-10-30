@@ -2,6 +2,7 @@ import React from "react";
 import "./Courses.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom'; // Import Link
 
 const Courses = () => {
   const navigate = useNavigate();
@@ -11,12 +12,13 @@ const Courses = () => {
   const [highschool, setHighschool] = useState(true);
   const [college, setCollege] = useState(true);
   const [tech, setTech] = useState(true);
+  
 
   return (
     <div className="Courses">
-      <div className="topshop1">
-        Home | <span className="toppp">Courses</span>
-      </div>
+      <div className="topshop10">
+        <Link to="/">Home | </Link><span className="toppp">Courses</span>
+       </div>
       <div className="patoo">
         <img src="src/assets/pato.png" alt="" />
       </div>

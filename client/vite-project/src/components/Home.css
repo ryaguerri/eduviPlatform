@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  border: 2px solid yellow;
+   
   align-items: center;
   width: 100vw;
   background-color: #f7f5fa;
@@ -16,11 +16,11 @@
   align-items: end;
   justify-content: center;
   gap: 10px;
-  border: 1px solid black;
+   
 }
 .classes {
   width: 78.8%;
-  border: 1px solid black;
+   
   height: 1120px;
 }
 
@@ -28,7 +28,7 @@
 .jointeacher {
   width: 75.6%;
   height: 521px;
-  border: 1px solid black;
+   
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -201,7 +201,7 @@
 }
 .classes {
   width: 78.8%;
-  border: 1px solid black;
+   
   height: 1120px;
   display: flex;
   flex-direction: column;
@@ -352,7 +352,7 @@ border: none;
 .joincourses {
   width: 88.8%;
   height: 667px;
-  border: 1px solid black;
+  
   background-color: #EDE9F2;
   display: flex;
   flex-direction: row;

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./joinasmentor.css";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 
@@ -12,8 +13,8 @@ const Joinasmentor = () => {
 
   return (
     <div className="join">
-      <div className="topshop1">
-        Home | <span className="toppp">Become An Instructor</span>
+      <div className="topshop11">
+      <Link to="/">Home | </Link> <span className="toppp">Become An Instructor</span>
       </div>
       <div className="patt3">
         <img src="src/assets/patt2.png" alt="" />

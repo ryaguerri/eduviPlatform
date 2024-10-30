@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux"; // Import useDispatch
 import { addCourse } from "../features/cartSlice"; // Import addCourse action
 import "./Coursesdet.css";
 import htmlData from "./html.json";
+import { Link } from "react-router-dom";
 
 const Coursesdet = () => {
   const location = useLocation();
@@ -46,7 +47,7 @@ const Coursesdet = () => {
         </button>
       </div>
       <div className="topshop1">
-        Home | Courses | <span className="toppp">Course Details</span>
+      <Link to="/">Home | </Link>  <Link to="/Courses">Courses| </Link><span className="toppp">Course Details</span>
       </div>
       <div className="det1">
         <div className="det11">
@@ -147,7 +148,7 @@ const Coursesdet = () => {
           </div>
         </div>
       </div>
-      <div className="te"></div>
+       
     </div>
   );
 };

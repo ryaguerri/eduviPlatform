@@ -419,8 +419,61 @@ font-weight: 500;
 line-height: 16px;
 letter-spacing: 0.03em;
 text-align: left;
+ 
+display: flex;
+flex-direction: row;
+width: 290px;
+text-decoration: none;
 
 
+}
+.topshop10{
+  position: absolute;
+  top: 40px;
+  left: 90px;
+ color: #0A033C66;
+font-size: 16px;
+font-weight: 500;
+line-height: 16px;
+letter-spacing: 0.03em;
+text-align: left;
+ 
+display: flex;
+flex-direction: row;
+width: 140px;
+text-decoration: none;
+
+
+}
+.topshop11{
+  position: absolute;
+  top: 40px;
+  left: 90px;
+ color: #0A033C66;
+font-size: 16px;
+font-weight: 500;
+line-height: 16px;
+letter-spacing: 0.03em;
+text-align: left;
+ 
+display: flex;
+flex-direction: row;
+width: 390px;
+text-decoration: none;
+
+
+}
+.topshop11 a{
+  text-decoration: none;
+  color: #AAA5BE;
+}
+.topshop10 a{
+  text-decoration: none;
+  color: #AAA5BE;
+}
+.topshop1 a{
+  text-decoration: none;
+  color: #AAA5BE;
 }
 .toppp{
   color: #9C4DF4;
