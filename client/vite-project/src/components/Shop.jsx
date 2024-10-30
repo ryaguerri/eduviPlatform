@@ -1,8 +1,17 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Shop.css";
+import { addToCart } from '../features/cartSlice';
+import { useDispatch } from 'react-redux';
+ 
 
 const Shop = () => {
+  const dispatch = useDispatch();
+
+  const handleBookClick = (book) => {
+    dispatch(addToCart(book));
+  };
+  
   const [books, setBooks] = useState([]);
   const [displayedBooks, setDisplayedBooks] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
@@ -204,7 +213,7 @@ const Shop = () => {
           <div className="booksright3">
             {displayedBooks.length > 0 ? (
               displayedBooks.map((book) => (
-                <div className="bookbox" key={book.id}>
+                <div className="bookbox" key={book.id}  onClick={() => handleBookClick(book)}>
                   <div className="bookimage">
                     <img src={book.image} alt={book.title} />
                   </div>

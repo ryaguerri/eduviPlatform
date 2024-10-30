@@ -217,7 +217,7 @@ const Courses = () => {
               </div>
               <button
                 onClick={() =>
-                  navigate("/Coursesdet", { state: { courseName: "HTML" } })
+                  navigate("/Coursesdet", { state: { courseName: "HTML", imageSrc: "src/assets/ht.png" } })
                 }
               >
                 Class Details

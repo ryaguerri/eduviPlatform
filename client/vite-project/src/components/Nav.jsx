@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import { Outlet, Link, useLocation } from "react-router-dom";
+import { useSelector } from 'react-redux';
 
 const Nav = () => {
+  const cartCount = useSelector((state) => state.cart.cartCount);
   const location = useLocation(); // To track the current path
   const [activeLink, setActiveLink] = useState(location.pathname); // Set the initial state based on the path
 
@@ -86,7 +88,7 @@ const Nav = () => {
                   className={activeLink === "/Cart" ? "active" : ""}
                 >
                   <div className="navi">
-                    Cart(0)
+                  Cart({cartCount})
                     <img src="src/assets/image2.png" alt="" className="im" />
                   </div>
                 </Link>

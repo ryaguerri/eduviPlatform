@@ -228,3 +228,8 @@ color: #FF6652;
 
 
 }
+.te{
+  border: 1px solid blueviolet;
+  height: 100px;
+  width: 400px;
+}
