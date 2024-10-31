@@ -1,13 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import "./register.css";
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate(); // Initialize useNavigate for navigation
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      // Send user data to the backend
+      const response = await axios.post("http://localhost:5000/api/create-user", {
+        name,
+        email,
+        password,
+      });
+      console.log(response.data); // Log the response from the server
+      // Navigate to the Signin page or another page after successful signup
+      navigate("/Myaccount", { state: { email } }); 
+    } catch (error) {
+      console.error("Signup error:", error);
+      alert("Error creating user: " + (error.response.data.message || "Please try again."));
+    }
   };
 
   return (
@@ -24,19 +47,16 @@ const Register = () => {
             </p>
           </div>
           <div className="bg13">
-            {" "}
             <img src="src/assets/obj.png" alt="" />
           </div>
         </div>
         <div className="bg2"></div>
         <div className="bg33">
-        <button className="gog">
-              {" "}
-              <img src="src/assets/gog.png" alt="ww" />
-              Signup with google 
-            </button>
-          <form action="" className="bg3">
-           
+          <button className="gog">
+            <img src="src/assets/gog.png" alt="ww" />
+            Signup with Google
+          </button>
+          <form onSubmit={handleSubmit} className="bg3">
             <div className="op">
               <img src="src/assets/hr.png" alt="ww" />
               <div className="sps">Or signup with your email</div>
@@ -45,14 +65,18 @@ const Register = () => {
             <div className="in">
               <p>Full name</p>
               <div className="cadna">
-                {" "}
                 <img src="src/assets/acc.png" alt="" />
               </div>
-              <input type="text" placeholder="Esther Howard"  required/>
+              <input
+                type="text"
+                placeholder="Esther Howard"
+                required
+                value={name}
+                onChange={(e) => setName(e.target.value)} // Capture full name
+              />
             </div>
             <div className="in">
               <div className="cadna">
-                {" "}
                 <img src="src/assets/mess.png" alt="" />
               </div>
               <p>Email</p>
@@ -60,19 +84,20 @@ const Register = () => {
                 type="text"
                 placeholder="bill.sanders@example.com"
                 required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)} // Capture email
               />
             </div>
             <div className="in">
               <div className="cadna1">
-                {" "}
                 <img src="src/assets/cadna.png" alt="" />
               </div>
               <div className="ayn" onClick={togglePasswordVisibility}>
                 <img
                   src={
                     showPassword
-                      ? "src/assets/eyeopen.png" // Icône pour mot de passe visible
-                      : "src/assets/ayn.png" // Icône pour mot de passe caché
+                      ? "src/assets/eyeopen.png"
+                      : "src/assets/ayn.png"
                   }
                   alt=""
                 />
@@ -82,11 +107,13 @@ const Register = () => {
                 type={showPassword ? "text" : "password"}
                 placeholder="*************"
                 required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)} // Capture password
               />
             </div>
             <div className="terms">
               <label>
-                <input type="checkbox" name="" id="" />{" "}
+                <input type="checkbox" required />{" "}
                 <p>
                   I agreed to the <span>Terms & Conditions</span>
                 </p>

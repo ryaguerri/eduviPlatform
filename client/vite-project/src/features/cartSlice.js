@@ -1,4 +1,23 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
+
+// Async action to fetch books from the API
+export const fetchBooks = createAsyncThunk('cart/fetchBooks', async (email) => {
+  const response = await axios.get(`http://localhost:5000/api/users/ryad@gmail.com/books`);
+  return response.data; // Assuming response.data is the array of books
+});
+
+// Async action to add a book to the user's cart in the backend
+export const addToCartAsync = createAsyncThunk('cart/addToCart', async ({ email, book }) => {
+  const response = await axios.post(`http://localhost:5000/api/users/ryad@gmail.com/addbook`, book);
+  return response.data;
+});
+
+// Async action to delete a book from the user's cart in the backend
+export const deleteBookAsync = createAsyncThunk('cart/deleteBook', async ({ email, bookTitle }) => {
+  await axios.delete(`http://localhost:5000/api/users/ryad@gmail.com/books`, { data: { title: bookTitle } });
+  return bookTitle; // Returning the title to identify the book to be removed in the reducer
+});
 
 const cartSlice = createSlice({
   name: 'cart',
@@ -6,21 +25,11 @@ const cartSlice = createSlice({
     items: [],
     cartCount: 0,
     notification: '',
-    courses: [], // New state to store purchased courses
+    courses: [], // State to store purchased courses
   },
   reducers: {
-    addToCart: (state, action) => {
-      const bookExists = state.items.some((item) => item.id === action.payload.id);
-      if (bookExists) {
-        state.notification = 'Book is already in the cart!';
-      } else {
-        state.items.push(action.payload);
-        state.cartCount += 1;
-        state.notification = 'Book added to cart!';
-      }
-    },
     removeFromCart: (state, action) => {
-      const index = state.items.findIndex((item) => item.id === action.payload.id);
+      const index = state.items.findIndex((item) => item.title === action.payload);
       if (index !== -1) {
         state.items.splice(index, 1);
         state.cartCount -= 1;
@@ -53,7 +62,42 @@ const cartSlice = createSlice({
       }
     },
   },
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchBooks.fulfilled, (state, action) => {
+        state.items = action.payload;
+        state.cartCount = action.payload.length;
+        state.notification = 'Books fetched successfully!';
+      })
+      .addCase(fetchBooks.rejected, (state) => {
+        state.notification = 'Failed to fetch books!';
+      })
+      .addCase(addToCartAsync.fulfilled, (state, action) => {
+        const bookExists = state.items.some((item) => item.id === action.payload.id);
+        if (!bookExists) {
+          state.items.push(action.payload);
+          state.cartCount += 1;
+          state.notification = 'Book added to cart!';
+        } else {
+          state.notification = 'Book is already in the cart!';
+        }
+      })
+      .addCase(addToCartAsync.rejected, (state) => {
+        state.notification = 'Failed to add book to cart!';
+      })
+      .addCase(deleteBookAsync.fulfilled, (state, action) => {
+        const index = state.items.findIndex((item) => item.title === action.payload);
+        if (index !== -1) {
+          state.items.splice(index, 1);
+          state.cartCount -= 1;
+          state.notification = 'Book removed from cart!';
+        }
+      })
+      .addCase(deleteBookAsync.rejected, (state) => {
+        state.notification = 'Failed to remove book from cart!';
+      });
+  },
 });
 
-export const { addToCart, removeFromCart, clearNotification, addCourse, removeCourse } = cartSlice.actions;
+export const { removeFromCart, clearNotification, addCourse, removeCourse } = cartSlice.actions;
 export default cartSlice.reducer;

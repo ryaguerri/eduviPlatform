@@ -1,7 +1,10 @@
 // src/store/store.js
 import { configureStore } from '@reduxjs/toolkit';
-import cartReducer from './features/cartSlice'; // Default import, no curly braces
+import cartReducer from './features/cartSlice'; 
+import userReducer from './features/userSlice';
 
 export const store = configureStore({
-  reducer: { cart: cartReducer },
+  reducer: { cart: cartReducer ,
+    user: userReducer,
+  },
 });

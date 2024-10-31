@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Shop.css";
-import { addToCart } from "../features/cartSlice";
-import { useDispatch } from "react-redux";
+import { addToCartAsync } from "../features/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const Shop = () => {
   const dispatch = useDispatch();
+  const email = useSelector((state) => state.user.email);
 
-  const handleBookClick = (book) => {
-    dispatch(addToCart(book));
-  };
+  useEffect(() => {
+    console.log("Email:", email);
+  }, [email]);
 
   const [books, setBooks] = useState([]);
   const [displayedBooks, setDisplayedBooks] = useState([]);
@@ -19,7 +20,6 @@ const Shop = () => {
   const [bookRange, setBookRange] = useState(books);
   const [activeButton, setActiveButton] = useState("all");
 
-  // Track the first 3 books to display in the left section
   const [firstThreeBooks, setFirstThreeBooks] = useState([]);
 
   useEffect(() => {
@@ -48,42 +48,36 @@ const Shop = () => {
       setBooks(limitedBooks);
       setDisplayedBooks(limitedBooks.slice(0, booksPerPage));
       setBookRange(limitedBooks);
-      setFirstThreeBooks(limitedBooks.slice(0, 3)); // Set first 3 for All Books initially
+      setFirstThreeBooks(limitedBooks.slice(0, 3));
     };
 
     fetchBooks();
   }, []);
 
-  // Function to update displayed books and first three books
   const updateDisplayedBooks = (newBooks, button) => {
     setBookRange(newBooks);
     setCurrentPage(0);
     setDisplayedBooks(newBooks.slice(0, booksPerPage));
     setActiveButton(button);
-    setFirstThreeBooks(newBooks.slice(4, 7)); // Update the first 3 books for the selected range
+    setFirstThreeBooks(newBooks.slice(4, 7));
   };
 
-  // Show all books and update first three books for "All Books"
   const showAllBooks = () => {
     updateDisplayedBooks(books, "all");
   };
 
-  // Show first 50 books and update first three books for "Kindergarten"
   const showBooks1to50 = () => {
     updateDisplayedBooks(books.slice(0, 50), "kindergarten");
   };
 
-  // Show books from 51 to 75 and update first three books for "High School"
   const showBooks51to75 = () => {
     updateDisplayedBooks(books.slice(50, 75), "highschool");
   };
 
-  // Show books from 76 to 100 and update first three books for "College"
   const showBooks76to100 = () => {
     updateDisplayedBooks(books.slice(75, 100), "college");
   };
 
-  // Handle search query input
   const handleSearch = (event) => {
     const query = event.target.value.toLowerCase();
     setSearchQuery(query);
@@ -120,6 +114,10 @@ const Shop = () => {
     return [...Array(rating)].map((_, index) => <span key={index}>⭐</span>);
   };
 
+  const handleBookClick = (book) => {
+    dispatch(addToCartAsync({ email, book }));
+  };
+
   return (
     <div className="shop">
       <div className="topshop1">
@@ -130,7 +128,6 @@ const Shop = () => {
           <p>Eduvi Online Book Shop</p>
         </div>
         <div className="topshopimage">
-          {" "}
           <img src="src/assets/books.png" alt="" />
         </div>
       </div>
@@ -138,7 +135,6 @@ const Shop = () => {
         <div className="booksleft">
           <div className="booksleft1">
             <p className="par">Popular Books</p>
-
             {firstThreeBooks.map((book) => (
               <div className="popularbookitem" key={book.id}>
                 <div className="popularbookitemimg">
@@ -156,7 +152,6 @@ const Shop = () => {
           </div>
           <div className="booksleft2">
             <p className="par">New Arrivals</p>
-
             {firstThreeBooks.map((book) => (
               <div className="popularbookitem" key={book.id}>
                 <div className="popularbookitemimg">
@@ -242,16 +237,10 @@ const Shop = () => {
           </div>
           <div className="booksright4">
             <button onClick={prevPage} disabled={currentPage === 0}>
-              <img src="src/assets/ar1.png" alt="" />
+              <img src="src/assets/back.png" alt="Previous" />
             </button>
-            <p>Page</p>
-            <button>{currentPage}</button>
-            <p>of {Math.ceil(bookRange.length / booksPerPage)}</p>
-            <button
-              onClick={nextPage}
-              disabled={(currentPage + 1) * booksPerPage >= bookRange.length}
-            >
-              <img src="src/assets/ar2.png" alt="" />
+            <button onClick={nextPage}>
+              <img src="src/assets/next.png" alt="Next" />
             </button>
           </div>
         </div>
