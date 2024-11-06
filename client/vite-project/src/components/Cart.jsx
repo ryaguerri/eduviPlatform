@@ -1,29 +1,34 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchBooks, removeFromCart, deleteBookAsync, removeCourse } from "../features/cartSlice";
+import { fetchBooks, fetchCourses, deleteBookAsync, deleteCourseAsync } from "../features/cartSlice";
 import "./cart.css";
 
 const Cart = () => {
   const dispatch = useDispatch();
-  
-  // Get items and courses from Redux state
+
   const items = useSelector((state) => state.cart.items);
   const courses = useSelector((state) => state.cart.courses);
 
-  // Fetch books when the component mounts
   useEffect(() => {
-    const email = 'ryad@gmail.com'; // Replace with the actual email you want to use
+    const email = 'ryad@gmail.com';
+    // Fetch books
     dispatch(fetchBooks(email));
+    // Fetch courses
+    dispatch(fetchCourses(email));
   }, [dispatch]);
 
+  // Debugging logs to check API responses
+  console.log("Fetched Books:", items);
+  console.log("Fetched Courses:", courses);
+
   const handleRemoveBook = (book) => {
-    const email = 'ryad@gmail.com'; // Replace with the actual email you want to use
-    dispatch(deleteBookAsync({ email, bookTitle: book.title }))
-      .then(() => dispatch(removeFromCart(book.title))); // Update frontend state after backend deletion
+    const email = 'ryad@gmail.com';
+    dispatch(deleteBookAsync({ email, bookTitle: book.title }));
   };
 
   const handleRemoveCourse = (course) => {
-    dispatch(removeCourse(course));
+    const email = 'ryad@gmail.com';
+    dispatch(deleteCourseAsync({ email, courseTitle: course.title })); // Ensure the correct key is being passed
   };
 
   return (
@@ -35,11 +40,11 @@ const Cart = () => {
             items.map((item, index) => (
               <div className="popularbookitem1" key={index}>
                 <div className="popularbookitemimg1">
-                  <img src={item.image} alt={item.title} />
+                  <img src={item.image || "default-image.jpg"} alt={item.title || "No title"} />
                 </div>
                 <div className="popularbookitemimgpara1">
-                  <p>{item.title}</p>
-                  <p className="para22">{item.price.toFixed(2)}$</p>
+                  <p>{item.title || "Title not available"}</p>
+                  <p className="para22">{item.price ? `${item.price.toFixed(2)}$` : "Price not available"}</p>
                   <button onClick={() => handleRemoveBook(item)}>Remove</button>
                 </div>
               </div>
@@ -56,12 +61,9 @@ const Cart = () => {
           {courses.length > 0 ? (
             courses.map((course, index) => (
               <div key={index} className="coraboxq">
-                <img src={course.imageSrc} alt={course.name} />
-                <p>{course.name}</p>
-                <button 
-                  onClick={() => handleRemoveCourse(course)} 
-                  className="biti"
-                >
+                <img src={course.image || "src/assets/ht.png"} alt={"No"} />
+                <p>{course.title || "Course title not available"}</p>
+                <button onClick={() => handleRemoveCourse(course)} className="biti">
                   Remove
                 </button>
               </div>

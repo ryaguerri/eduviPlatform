@@ -4,28 +4,47 @@ import jwt from "jsonwebtoken";
 import mongoose from "mongoose";
 export const deleteCourseByEmailAndTitle = async (req, res) => {
   try {
-    const { email, title } = req.params;  
+    const { email } = req.params;  // Get email from the URL parameter
+    const { title } = req.body;  // Get title from the request body
 
     if (!email || !title) {
       return res.status(400).json({ message: "Missing email or title parameter" });
     }
 
-    
+    // Normalize the title to lowercase to avoid case sensitivity issues
+    const normalizedTitle = title.trim().toLowerCase();
+
+    // Find the user by email
     const user = await User.findOne({ email });
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
 
-    
-    user.courses = user.courses.filter(course => course.title !== title);
+    // Check if the user has the course before deleting
+    console.log('User Courses before deletion:', user.courses);
+    const courseIndex = user.courses.findIndex(course => course.title.trim().toLowerCase() === normalizedTitle);
+
+    if (courseIndex === -1) {
+      return res.status(404).json({ message: `Course '${title}' not found for this user` });
+    }
+
+    // Remove the course from the user's courses array
+    user.courses.splice(courseIndex, 1);
+
+    // Save the updated user document
     await user.save();
 
+    console.log('Updated Courses:', user.courses); // Verify updated data
     res.status(200).json({ message: "Course deleted successfully", courses: user.courses });
   } catch (error) {
-    console.error("Error deleting course:", error);  
+    console.error("Error deleting course:", error);
     res.status(500).json({ message: "Internal Server Error", error: error.message });
   }
 };
+
+
+
+
 
 export const getCoursesByEmail = async (req, res) => {
   try {

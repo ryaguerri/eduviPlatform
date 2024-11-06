@@ -1,19 +1,22 @@
 import React, { useState } from "react";
-import { useLocation } from "react-router-dom";
-import { useDispatch } from "react-redux"; // Import useDispatch
-import { addCourse } from "../features/cartSlice"; // Import addCourse action
+import { useLocation, Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux"; // Import useDispatch and useSelector
+import { addCourseAsync } from "../features/cartSlice"; // Import addCourseAsync action
+import htmlData from "./html.json"; // Assuming this contains the lessons data
 import "./Coursesdet.css";
-import htmlData from "./html.json";
-import { Link } from "react-router-dom";
 
 const Coursesdet = () => {
   const location = useLocation();
   const { courseName, imageSrc } = location.state || {}; // Assuming you pass imageSrc in the state
-  const lessons = htmlData.lessons;
+  const lessons = htmlData.lessons; // Get lessons data
   const dispatch = useDispatch(); // Initialize dispatch
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0); // Handle lesson navigation
 
+  // Get the email of the logged-in user from Redux (assuming it's stored there)
+  const email = useSelector((state) => state.user.email);
+
+  // Lesson navigation handlers
   const handleLessonClick = (index) => {
     setCurrentIndex(index);
   };
@@ -26,11 +29,14 @@ const Coursesdet = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + lessons.length) % lessons.length);
   };
 
-  const selectedLesson = lessons[currentIndex];
+  const selectedLesson = lessons[currentIndex]; // Get the selected lesson details
 
-  // Function to handle purchasing the course
+  // Handle course purchase
   const handlePurchaseCourse = () => {
-    dispatch(addCourse({ name: courseName, imageSrc })); // Dispatch action to add course
+    
+
+    // Dispatch addCourseAsync action to add the course to the user's courses
+    dispatch(addCourseAsync({ email, course: { title: 'HTML', imageSrc: 'src/assets/ht.png' } }));
   };
 
   return (
@@ -46,9 +52,13 @@ const Coursesdet = () => {
           Next
         </button>
       </div>
+
       <div className="topshop1">
-      <Link to="/">Home | </Link>  <Link to="/Courses">Courses| </Link><span className="toppp">Course Details</span>
+        <Link to="/">Home | </Link>
+        <Link to="/Courses">Courses | </Link>
+        <span className="toppp">Course Details</span>
       </div>
+
       <div className="det1">
         <div className="det11">
           {selectedLesson ? (
@@ -58,7 +68,7 @@ const Coursesdet = () => {
                 <pre>{selectedLesson.content}</pre>
               </div>
               <div className="det1111">
-                <h4>example: </h4>
+                <h4>Example:</h4>
                 <pre>{selectedLesson.example}</pre>
               </div>
             </>
@@ -66,6 +76,7 @@ const Coursesdet = () => {
             <p>Please select a lesson to view details.</p>
           )}
         </div>
+
         <div className="det12">
           {lessons.map((lesson, index) => (
             <button
@@ -73,7 +84,7 @@ const Coursesdet = () => {
               className={currentIndex === index ? "det12b2" : "det12b1"}
               onClick={() => handleLessonClick(index)}
             >
-              <h4> {lesson.lesson}</h4>
+              <h4>{lesson.lesson}</h4>
             </button>
           ))}
         </div>
@@ -103,42 +114,61 @@ const Coursesdet = () => {
             </ul>
           </div>
         </div>
+
         <div className="det22">
           <div className="det221">
             <div className="det221box">
-              <div className="det221box1"><p>Price</p></div>
+              <div className="det221box1">
+                <p>Price</p>
+              </div>
               <p className="det221box4">Free</p>
             </div>
             <div className="det221box">
-              <div className="det221box1"><p>Instructor</p></div>
+              <div className="det221box1">
+                <p>Instructor</p>
+              </div>
               <p className="det221box3">Guerri Ryad</p>
             </div>
             <div className="det221box">
-              <div className="det221box1"><p>Ratings</p></div>
+              <div className="det221box1">
+                <p>Ratings</p>
+              </div>
               <p className="det221box2">⭐⭐⭐⭐⭐</p>
             </div>
             <div className="det221box">
-              <div className="det221box1"><p>Durations</p></div>
+              <div className="det221box1">
+                <p>Duration</p>
+              </div>
               <p className="det221box2">10 Days</p>
             </div>
             <div className="det221box">
-              <div className="det221box1"><p>Lessons</p></div>
+              <div className="det221box1">
+                <p>Lessons</p>
+              </div>
               <p className="det221box2">30</p>
             </div>
             <div className="det221box">
-              <div className="det221box1"><p>Quizzes</p></div>
+              <div className="det221box1">
+                <p>Quizzes</p>
+              </div>
               <p className="det221box2">5</p>
             </div>
             <div className="det221box">
-              <div className="det221box1"><p>Certificate</p></div>
+              <div className="det221box1">
+                <p>Certificate</p>
+              </div>
               <p className="det221box2">Yes</p>
             </div>
             <div className="det221box">
-              <div className="det221box1"><p>Language</p></div>
+              <div className="det221box1">
+                <p>Language</p>
+              </div>
               <p className="det221box2">English</p>
             </div>
             <div className="det221box">
-              <div className="det221box1"><p>Access</p></div>
+              <div className="det221box1">
+                <p>Access</p>
+              </div>
               <p className="det221box2">Lifetime</p>
             </div>
           </div>
@@ -148,7 +178,6 @@ const Coursesdet = () => {
           </div>
         </div>
       </div>
-       
     </div>
   );
 };

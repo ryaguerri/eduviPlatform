@@ -3,6 +3,7 @@ import { Outlet, Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Nav = () => {
+  // Get the cart count from the Redux store
   const cartCount = useSelector((state) => state.cart.cartCount);
   const location = useLocation();
   const [activeLink, setActiveLink] = useState(location.pathname);
@@ -15,6 +16,11 @@ const Nav = () => {
   const handleLinkClick = (path) => {
     setActiveLink(path);
   };
+  const cartItems = useSelector((state) => state.cart.items);  // Books in the cart
+  const courses = useSelector((state) => state.cart.courses);  // Courses in the cart
+
+  // Calculate the total number of items (courses + books + 1)
+  const totalItems = courses.length + cartItems.length + 1;
 
   return (
     <div className="nav">
@@ -93,7 +99,7 @@ const Nav = () => {
                   className={activeLink === "/Cart" ? "active" : ""}
                 >
                   <div className="navi">
-                    Cart ({cartCount})
+                    Cart ({totalItems-1})
                     <img src="src/assets/image2.png" alt="" className="im" />
                   </div>
                 </Link>
