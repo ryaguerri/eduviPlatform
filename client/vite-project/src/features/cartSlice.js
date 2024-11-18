@@ -119,7 +119,6 @@ const cartSlice = createSlice({
       .addCase(deleteCourseAsync.rejected, (state) => {
         state.notification = 'Failed to remove course from cart!';
       })
-      // Add this logic to handle course addition similarly to books
       .addCase(addCourseAsync.fulfilled, (state, action) => {
         state.cartCount += 1;
         state.courses.push(action.payload); // Assuming action.payload is the added course
@@ -127,6 +126,14 @@ const cartSlice = createSlice({
       })
       .addCase(addCourseAsync.rejected, (state) => {
         state.notification = 'Failed to add course to cart!';
+      })
+      .addCase(addToCartAsync.fulfilled, (state, action) => {
+        state.cartCount += 1;
+        state.items.push(action.payload); // Assuming action.payload is the added book
+        state.notification = 'Book added to cart!';
+      })
+      .addCase(addToCartAsync.rejected, (state) => {
+        state.notification = 'Failed to add book to cart!';
       });
   },
 });

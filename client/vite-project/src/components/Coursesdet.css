@@ -98,7 +98,8 @@
 
   border: none;
 }
-.topshop1 {
+.topshop2 {
+ 
   position: absolute;
   top: 40px;
   left: 90px;
@@ -108,6 +109,13 @@
   line-height: 16px;
   letter-spacing: 0.03em;
   text-align: left;
+}
+.topshop2 :link{
+  text-decoration: none;
+  
+}
+link{
+  color: #eceaef;
 }
 .toppp {
   color: #9c4df4;

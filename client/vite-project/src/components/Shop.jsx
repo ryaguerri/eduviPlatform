@@ -7,6 +7,9 @@ import { Link } from "react-router-dom";
 
 const Shop = () => {
   const dispatch = useDispatch();
+
+  const items = useSelector((state) => state.cart.items);
+  const courses = useSelector((state) => state.cart.courses);
   const email = useSelector((state) => state.user.email);
 
   useEffect(() => {

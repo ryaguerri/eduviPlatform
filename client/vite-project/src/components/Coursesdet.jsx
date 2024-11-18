@@ -53,7 +53,7 @@ const Coursesdet = () => {
         </button>
       </div>
 
-      <div className="topshop1">
+      <div className="topshop2">
         <Link to="/">Home | </Link>
         <Link to="/Courses">Courses | </Link>
         <span className="toppp">Course Details</span>

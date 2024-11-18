@@ -17,7 +17,7 @@ const Cart = () => {
     dispatch(fetchCourses(email));
   }, [dispatch]);
 
-  // Debugging logs to check API responses
+   
   console.log("Fetched Books:", items);
   console.log("Fetched Courses:", courses);
 

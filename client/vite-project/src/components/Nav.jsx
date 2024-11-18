@@ -20,7 +20,7 @@ const Nav = () => {
   const courses = useSelector((state) => state.cart.courses);  // Courses in the cart
 
   // Calculate the total number of items (courses + books + 1)
-  const totalItems = courses.length + cartItems.length + 1;
+  const totalItems = courses.length + cartItems.length ;
 
   return (
     <div className="nav">
@@ -100,7 +100,7 @@ const Nav = () => {
                   className={activeLink === "/Cart" ? "active" : ""}
                 >
                   <div className="navi">
-                    Cart ({totalItems-1})
+                    Cart ({totalItems})
                     <img src="src/assets/image2.png" alt="" className="im" />
                   </div>
                 </Link>
