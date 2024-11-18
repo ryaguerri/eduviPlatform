@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Shop.css";
 import { addToCartAsync } from "../features/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Shop = () => {
   const dispatch = useDispatch();
@@ -121,7 +122,7 @@ const Shop = () => {
   return (
     <div className="shop">
       <div className="topshop1">
-        Home | <span className="toppp">Shop</span>
+      <Link to="/">Home | </Link> <span className="toppp">Shop</span>
       </div>
       <div className="topshop">
         <div className="topshoptitre">
@@ -237,10 +238,10 @@ const Shop = () => {
           </div>
           <div className="booksright4">
             <button onClick={prevPage} disabled={currentPage === 0}>
-              <img src="src/assets/back.png" alt="Previous" />
+              <img src="src/assets/ar1.png" alt="Previous" />
             </button>
             <button onClick={nextPage}>
-              <img src="src/assets/next.png" alt="Next" />
+              <img src="src/assets/ar2.png" alt="Next" />
             </button>
           </div>
         </div>

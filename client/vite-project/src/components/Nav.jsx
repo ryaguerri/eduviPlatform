@@ -27,7 +27,8 @@ const Nav = () => {
       <nav>
         <div className="top">
           <div className="topLeft">
-            <img src="src/assets/image.png" alt="" />
+          <img src="src/assets/image.png" alt="" />
+             
             <p>Eduvi</p>
           </div>
 
@@ -50,7 +51,7 @@ const Nav = () => {
                 >
                   <div className="navi">
                     For Kindergarten
-                    <img src="src/assets/image1.png" alt="" className="im" />
+                     
                   </div>
                 </Link>
               </li>
@@ -62,7 +63,7 @@ const Nav = () => {
                 >
                   <div className="navi">
                     For High School
-                    <img src="src/assets/image1.png" alt="" className="im" />
+                     
                   </div>
                 </Link>
               </li>
@@ -74,7 +75,7 @@ const Nav = () => {
                 >
                   <div className="navi">
                     For College
-                    <img src="src/assets/image1.png" alt="" className="im" />
+                   
                   </div>
                 </Link>
               </li>
@@ -86,7 +87,7 @@ const Nav = () => {
                 >
                   <div className="navi">
                     Courses
-                    <img src="src/assets/image1.png" alt="" className="im" />
+                     
                   </div>
                 </Link>
               </li>
